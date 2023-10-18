@@ -1,0 +1,251 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "@1182";
+$database = "photography";
+
+// Create a connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+echo "Connected successfully";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm a Photographer</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header" class="vh-100 flex">
+        <div class="container">
+            <div class="header-content">
+                <h1>I'm a <br><span class="typewrite" data-loop="yes" data-speed="100" data-delay="2000"
+                        data-words='["photographer", "videographer", "video editor"]'></span></h1>
+                <h3>Meet Mandaviya</h3>
+
+                <ul class="social-links">
+                    <!-- <li>
+                        <a href="#" class="flex">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="https://twitter.com/_MeetGajjar11" target="_blank" class="flex">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/photographybymeet/" target="_blank" class="flex">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://in.pinterest.com/photographybymeet/" target="_blank" class="flex">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- main content -->
+    <main>
+        <!-- about section -->
+        <section id="about" class="about py-7">
+            <div class="container">
+                <div class="about-content grid">
+                    <div class="about-left">
+                        <img src="images\profile.jpg" alt="">
+                    </div>
+                    <div class="about-right">
+                        <div class="title">
+                            <h2>About Me</h2>
+                        </div>
+                        <p class="lead">I am trying to combine my engineer's degree with my
+                            photography to find the right balance between creativity and commercial sense. I'm
+                            an experienced photographer in different photography.</p>
+                        <!-- <p class="lead"></p> -->
+                        <p class="lead">You can checkout my recent works and experiences below. I consider photography
+                            as my passion more than profession.</p>
+                        <a href="#work" class="btn-down">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of about section -->
+
+        <!-- work section -->
+        <section id="work" class="vh-100 flex py-7">
+            <div class="container">
+                <div class="work-content">
+                    <div class="title">
+                        <h2>what am i doing?</h2>
+                    </div>
+                    <ul class="work-top grid">
+                        <li class="lead"><i class="fas fa-dot-circle"></i> I work according to the requirement of the
+                            customers.
+                        </li>
+                        <li class="lead"><i class="fas fa-dot-circle"></i> Your files will be stored multiple times on
+                            two locations.</li>
+                        <li class="lead"><i class="fas fa-dot-circle"></i> I like to shoot smiling faces and candid photographs.</li>
+                        <li class="lead"><i class="fas fa-dot-circle"></i> I edit photos in lightroom and sometimes photoshop.</li>
+                        <li class="lead"><i class="fas fa-dot-circle"></i> I am enhancing my skills in videography.</li>
+                        <li class="lead"><i class="fas fa-dot-circle"></i> I am enhancing my skills in aftereffects and da vinci resolve.</li>
+                    </ul>
+
+                    <div class="work-bottom grid">
+                        <div>
+                            <span class="icon"><img src="images/wildlife-icon.png"></span>
+                            <h3>Wildlife</h3>
+                        </div>
+                        <div>
+                            <span class="icon"><img src="images/portrait-icon.png"></span>
+                            <h3>Portraits</h3>
+                        </div>
+                        <div>
+                            <span class="icon"><img src="images/landscape-icon.png"></span>
+                            <h3>Landscape</h3>
+                        </div>
+                        <div>
+                            <span class="icon"><img src="images/family-icon.png"></span>
+                            <h3>Family</h3>
+                        </div>
+                        <!-- <div>
+                            <span class="icon"><img src="images/white-coat.png"></span>
+                            <h3>Fashion</h3>
+                        </div> -->
+                    </div>
+                    <a href="#portfolio" class="btn-down btn-down-white">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- end of work section -->
+
+        <!-- portfolio section -->
+        <section id="portfolio" class="vh-100 py-7">
+            <div class="container">
+                <div class="portfolio-content">
+                    <div class="title">
+                        <h2>my last works</h2>
+                        <a href="#contact" class="btn-down">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-grid grid">
+                        <div><img src="images\site\animal\20230102181143_IMG_9155.jpg"></div>
+                        <div><img src="images\site\sun\LRM_20211023_174636.jpg"></div>
+                        <div><img src="images\site\flower.jpg"></div>
+                        <div><img src="images\site\ppl\IMG_2709.jpg"></div>
+                        <div><img src="images\site\animal\20230215183016_IMG_2414.jpg"></div>
+                        <div><img src="images\site\animal\20230308140825_IMG_4628.jpg"></div>
+                        <div><img src="images\1.jpg"></div>
+                        <!-- <div><img src="images\1.jpg"></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of portfolio section -->
+
+        <!-- contact section -->
+        <section id="contact" class="py-7">
+            <div class="container">
+                <div class="contact-content flex">
+                    <div class="contact-left">
+                        <div class="title">
+                            <h2>contact me</h2>
+                        </div>
+                        <p class="lead"><i class="fas fa-phone-alt"></i> +91 7573071182</p>
+                        <p class="lead"><i class="fas fa-envelope"></i> meet.gajjar1182@gmail.com</p>
+                        <form action="">
+                            <input type="text" class="form-control" placeholder="Your name here ...">
+                            <input type="email" class="form-control" placeholder="Your email here">
+                            <input type="submit" class="btn-submit btn" value="Submit">
+                        </form>
+                    </div>
+
+                    <div class="contact-right">
+                        <img src="images/me.jpg" alt="contact image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of contact section -->
+
+        <!-- instagram section -->
+        <section id="insta" class="py-7">
+            <div class="container">
+                <div class="insta-content">
+                    <div class="title">
+                        <h2>instagram</h2>
+                        <a href="#footer" class="btn-down btn-down-white">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div class="insta-grid grid">
+                        <div><img src="images\site\sun\20230215183843_IMG_2461.jpg"></div>
+                        <div><img src="images\meet.jpg"></div>
+                        <div><img src="images\site\drop-1.jpg"></div>
+                        <div><img src="images\2.jpg"></div>
+                        <!-- <div><img src="images\2.jpg"></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of instagram section -->
+    </main>
+    <!-- end of main content -->
+
+    <!-- footer -->
+    <footer id="footer" class="py-7">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>MEET MANDAVIYA</h3>
+                    <div><img src="images/profile.jpg"></div>
+                </div>
+
+                <div>
+                    <h3>Links</h3>
+                    <ul class="flex">
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                        <li><a href="https://www.instagram.com/photographybymeet/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+    <!-- typewriting js -->
+    <script src="typewriting-master/typewriting.js"></script>
+</body>
+
+</html>
